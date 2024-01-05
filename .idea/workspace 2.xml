@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fab6e66f-d781-43c6-961a-cc7ff0c21b63" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DataStructure.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVA.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Operator.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Var.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Variable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week05/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week05/TestRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week05/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week05/muti/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week05/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week05/single/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week05/testThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JAVA_learning.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/Calculator.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/src/BadInputException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/src/CalculatorApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/src/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/BadInputException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/CalculatorApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/Parser.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2aQZMnhg9691rFjoNQ8Hu2W8NTW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "last_opened_file_path": "/Users/kudonghyun/Desktop/everyThingEveryWhereAllAtOnes/JAVA_learning",
+    "onboarding.tips.debug.path": "/Users/kudonghyun/Desktop/JAVA_learning/Calculator/src/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fab6e66f-d781-43c6-961a-cc7ff0c21b63" name="Changes" comment="" />
+      <created>1704252718286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704252718286</updated>
+    </task>
+    <servers />
+  </component>
+</project>
