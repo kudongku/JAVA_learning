@@ -7,7 +7,6 @@ public class Main {
 	}
 }
 ```
-
 ### public class Main
 - public 은 접근 제어자
 - class 는 객체
@@ -24,9 +23,7 @@ public class Main {
 ### System.out.println("Hello world!");
 - print 와 println, printf 등이 있는데 잘 섞어서 사용해야 됨.
 - System.out.println("Hello world!") = System.out.print("Hello world!\n")
-
-## 객체 지향 프로그래법
-### 객체
+## 객체
 > 객체는 필드와 메소드로 구성됨
 >
 > 객체를 설계하는 것은 객체 모델링
@@ -42,7 +39,8 @@ public class Main {
 
 ### 객체 지향의 속성
 1. 캡슐화 :
-   필드와 메소드를 하나로 묶어 객체로 만든 뒤, private 으로 감추는 것
+   필드와 메소드를 하나로 묶어 객체로 만든 뒤, private 으로 감추는 것,
+   즉 접근 제어자를 사용하여 구현한다.
 2. 상속 :
    부모의 필드와 메서드를 자식에게 상속
 3. 다향상:
@@ -68,13 +66,11 @@ new Car(); // Car클래스 객체 생성
 Car car1 = new Car(); // Car클래스의 객체인 car1 인스턴스 생성
 Car car2 = new Car(); // Car클래스의 객체인 car2 인스턴스 생성
 ```
-
-### 필드
+## 필드
 필드는 고유데이터 상태데이터 객체데이터로 분류
 - 고유는 변하지 않는 것
 - 상태는 변하는 것
-
-### 메서드 
+## 메서드 
 > 메서드 오버로딩
 > 
 > println 에서 많운 파라미터를 넣은 수 있는 것!!
@@ -149,21 +145,22 @@ System.out.println("carInstanceTire.company = " + carInstanceTire.company); // "
 > 인스턴스 멤버는 인스턴스 필드, 인스턴스 메서드가 존재한다.
 > 
 > 클래스 멤버는 클래스 필드, 클래스 메서드를 말한다.
-> 
-> 인스턴스 멤버는 객체를 생성한 후에 사용 가능
-> 
-> 클래스 멤버는 객체 생성을 하지 않아도 사용가능합니다.
+>
 
 
 ### 인스턴스 멤버
 > 메서드는 모든 인스턴스가 같은 메모리에 메소드를 두고 공유
 > 
 > 필드는 인스턴스 마다 저장공간을 가진다. 
+> 
+> 인스턴스 멤버는 객체를 생성한 후에 사용 가능
 
 ### 클래스 멤버
 > static 을 사용하면 가능
 > 
 > 메인메소드가 이에 해당
+> 
+> 클래스 멤버는 객체 생성을 하지 않아도 사용가능합니다.
 
 ### 경우의 수
 1. 스태틱 필드, 인스턴스 메소드? 사용가능
@@ -172,10 +169,105 @@ System.out.println("carInstanceTire.company = " + carInstanceTire.company); // "
 > 
 > 인스턴스 메소드는 스태틱 필드가 저장된 후 에 사용되기 때문에 사용 가능
 
-## 클래스 변수, 인스턴스 변수
-## 생성자, 생성자 오버로팅
+### 지역변수
+> 메소드가 실행되면 생성
+> 
+> 종료되면 소멸
+> 
+```java
+public class Main {
+    public static void main(String[] args) {
+        Main main1 = new Main();
+        Main main2 = new Main();
+
+        System.out.println(main1.getNumber(3));
+        System.out.println(main1.getNumber(3));
+        System.out.println(main1.getNumber(3));
+        System.out.println(main1.getNumber(3));
+        System.out.println(main2.getNumber(3));
+    }
+
+    public int getNumber(int num){
+        int i = 1;
+        i+=num;
+        return i;
+    }
+}
+
+```
+> 값이 누적되지 않는다
+### 전역변수(static)
+> 상수와 목적이 비슷하기 때문에 final static 으로 선언되기도 한다.
+## 생성자
+### 기본생성자
+매개변수를 아무것도 받지 않는 생성자를 말한다.
+
+작성하지 않아도 자동으로 생성되지만,
+
+만약 한개 이상의 생성자를 이미 만든 경우에는 기본생성자를 작성해야만 생성이 된다.
+### 생성자 오버로딩
+```
+Car car2 = new Car("GV60");
+Car car3 = new Car("GV70", "Blue");
+```
+이 처럼, 매개인자의 개수에 따라 생성자를 여러개 두는 것을 오버롣딩이라 한다.
 ## this, this()
+- this 는 생성자 내에서 인스턴스 자기자신을 가리킬때 사용한다.
+- this()
+```
+public Car(String model) {
+    this.model = model;
+    this.color = "Blue";
+    this.price = 50000000;
+}
+
+public Car(String model, String color) {
+    this.model = model;
+    this.color = color;
+    this.price = 50000000;
+}
+
+public Car(String model, String color, double price) {
+    this.model = model;
+    this.color = color;
+    this.price = price;
+}
+```
+코드의 중복이 발생하기 때문에
+```
+public Car(String model) {
+    this(model, "Blue", 50000000);
+}
+
+public Car(String model, String color) {
+    this(model, color, 100000000);
+}
+
+public Car(String model, String color, double price) {
+    this.model = model;
+    this.color = color;
+    this.price = price;
+}
+```
+이런 식으로 코드의 중복을 피한다.
+
+이렇게 사용할때는 this()는 첫줄에 사용되어야 한다.
 ## 접근 제어자
+- public : 접근 제한이 전혀 없습니다.
+- proteceted : 같은 패키지 내에서만, 다른 패키지이지만 자손클래스라면 접근이 가능
+- default : 같은 패키지 내에서만 접근이 가능
+- private : 같은 클래스 내에서만 접근이 가능
+- 따로 지정이 안되면 default로 처리된다.
+- 사용가능한 제어자
+   - 클래스 : `public`, `default`, `final`, `abstract`
+   - 메서드 :`public`, `protected`, `default`, `private`, `final`, `abstract`, `static`
+   - 멤버변수 :`public`, `protected`, `default`, `private`, `final`, `static`
+   - 지역변수 : `final`
+
+- 메서드에 `static`과 `abstract`를 함께 사용할 수 없다.
+- 클래스에 `abstract`와 `final`을 동시에 사용할 수 없다.
+- `abstract`메서드의 접근 제어자가 `private`일 수 없다.
+- 메서드에 `private`와 `final`을 같이 사용할 필요는 없다.
 ## package
 ## import
 ## 상속
@@ -183,6 +275,56 @@ System.out.println("carInstanceTire.company = " + carInstanceTire.company); // "
 ## super, super()
 ## 다형성 원리와 구현방법
 ## 추상클래스
-## 인터페이스 역할, 구성요소, 구현방법
-## 인터페이스 디폴트 메소드, static 메서드
-## 인터페이스 다형성 원리 구현방필드
+- 미완성된 클래스
+- abstract 제어자를 사용하여 추상클래스를 선언할 수 있다.
+```java
+public abstract class 추상클래스명 {
+
+}
+```
+- 추상클래스에서 추상 메소드 또한 생성 가능
+```java
+public abstract class 추상클래스명 {
+		abstract 리턴타입 메서드이름(매개변수, ...);
+}
+```
+- 추상클래스는 자식클래스에 상속되어 완성된다.
+```java
+public class 클래스명 extends 추상클래스명 {
+		@Override
+    public 리턴타입 메서드이름(매개변수, ...) {
+		       // 실행문
+    }
+}
+```
+### 예제
+Car 추상 클래스
+```java
+public abstract class Car {
+    String company; // 자동차 회사
+    String color; // 자동차 색상
+    double speed;  // 자동차 속도 , km/h
+
+    public double gasPedal(double kmh) {
+        speed = kmh;
+        return speed;
+    }
+
+    public double brakePedal() {
+        speed = 0;
+        return speed;
+    }
+
+    public abstract void horn();
+}
+```
+Car 추상 클래스를 상속받은 ZenesisCar 클래스
+```java
+public class ZenesisCar extends Car {
+
+    @Override
+    public void horn() {
+        System.out.println("Zenesis 빵빵");
+    }
+}
+```
